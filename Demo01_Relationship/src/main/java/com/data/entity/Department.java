@@ -1,12 +1,16 @@
 package com.data.entity;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Data
+@Data // ham toString gay loi cho MQH trong hibernate
+@Getter
+@Setter
 @Table(name = "department")
 public class Department {
 
@@ -18,4 +22,5 @@ public class Department {
 
     @OneToMany(mappedBy = "department")
     private List<Employee> employees;
+
 }
