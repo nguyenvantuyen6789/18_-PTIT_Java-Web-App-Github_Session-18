@@ -17,4 +17,9 @@ public class DepartmentServiceImpl implements DepartmentService {
     public List<Department> findAll() {
         return departmentRepo.findAll();
     }
+
+    @Override
+    public int delete(int id) {
+        return departmentRepo.delete(id);
+    }
 }

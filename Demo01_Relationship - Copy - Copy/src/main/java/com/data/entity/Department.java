@@ -20,7 +20,7 @@ public class Department {
 
     private String departmentName;
 
-    @OneToMany(mappedBy = "department")
+    @OneToMany(mappedBy = "department", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Employee> employees;
 
 }
